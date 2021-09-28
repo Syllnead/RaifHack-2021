@@ -62,8 +62,6 @@ train = train[train['city'].isin(test['city'])]
 
 
 
-#
-# преобразуем некоторые признаки, чтобы можно было использовать для обучения
 train['date'] = train['date'].apply(lambda x: x.replace('-', '')).astype(int)
 train['id'] = train['id'].apply(lambda x: x.replace('COL_', '')).astype(int)
 
